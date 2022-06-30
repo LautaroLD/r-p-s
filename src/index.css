@@ -1,0 +1,219 @@
+@import '~/node_modules/bootstrap/dist/css/bootstrap.css';
+.counter {
+  border: 1px solid white;
+  border-radius: 10px;
+  max-width: 500px;
+}
+.counter-left > p {
+  line-height: 0.8;
+}
+.counter-right {
+  border-radius: 10px;
+}
+.counter-right-text {
+  color: blue;
+}
+.counter-right-number {
+  font-size: 40px;
+}
+
+.game-section {
+  height: 60vh;
+  background-image: url("./App/components/images/bg-triangle.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 500px;
+}
+@media only screen and (max-width: 767px) {
+  .game-section {
+    background-size: 70%;
+    max-width: 400px;
+    padding: 0;
+    max-height: 350px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .game-section {
+    height: 500px;
+    background-size: 90%;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .game-section {
+    height: 600px;
+    background-size: 100%;
+  }
+}
+.game-section .item {
+  height: 120px;
+  width: 120px;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  border: 15px solid;
+}
+@media only screen and (max-width: 767px) {
+  .game-section .item {
+    border: 10px solid;
+    height: 100px;
+    width: 100px;
+  }
+}
+.game-section .item-paper {
+  border-color: #4865f4;
+  background-image: url("./App/components/images/icon-paper.svg");
+}
+@media only screen and (max-width: 767px) {
+  .game-section .item-paper {
+    top: 0px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .game-section .item-paper {
+    top: 0px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .game-section .item-paper {
+    left: -5%;
+    top: 5%;
+  }
+}
+.game-section .item-scissor {
+  right: 0;
+  border-color: #ec9e0e;
+  background-image: url("./App/components/images/icon-scissors.svg");
+}
+@media only screen and (max-width: 767px) {
+  .game-section .item-scissor {
+    top: 0px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .game-section .item-scissor {
+    top: 0px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .game-section .item-scissor {
+    right: -5%;
+    top: 5%;
+  }
+}
+.game-section .item-rock {
+  top: 70%;
+  margin-inline: auto;
+  border-color: #dc2e4e;
+  background-image: url("./App/components/images/icon-rock.svg");
+}
+
+.result-section {
+  max-width: 500px;
+  height: 60vh;
+  padding: 0%;
+}
+.result-section .results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.result-section .item {
+  height: 120px;
+  width: 120px;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  border: 10px solid;
+}
+@media only screen and (max-width: 767px) {
+  .result-section .item {
+    border: 10px solid;
+    height: 100px;
+    width: 100px;
+  }
+}
+.result-section .item-rock {
+  border-color: #dc2e4e;
+  background-image: url("./App/components/images/icon-rock.svg");
+}
+.result-section .item-paper {
+  right: 0;
+  background-image: url("./App/components/images/icon-paper.svg");
+  border-color: #4865f4;
+}
+.result-section .item-scissor {
+  margin-inline: auto;
+  border-color: #ec9e0e;
+  background-image: url("./App/components/images/icon-scissors.svg");
+}
+
+.rules-section .modalOpen {
+  display: flex;
+  animation: openModal 0.3s linear;
+}
+@keyframes openModal {
+  from {
+    top: 50%;
+    left: 50%;
+    height: 0vh;
+    width: 0vw;
+  }
+}
+.rules-section .modal {
+  justify-content: end;
+  margin: auto;
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  background-image: url("./App/components/images/image-rules.svg");
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+}
+@media only screen and (min-width: 768px) {
+  .rules-section .modal {
+    position: absolute;
+    top: 10vh;
+    left: 15vw;
+    right: auto;
+    bottom: auto;
+    height: 80vh;
+    width: 70vw;
+    border-radius: 15px;
+    border: 1px solid black;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .rules-section .modal {
+    background-size: 60%;
+  }
+}
+.rules-section .modal .btn-close {
+  font-size: 30px;
+  margin: 20px;
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+body #root {
+  width: 100vw;
+}
+
+main {
+  background: radial-gradient(circle, #1f3756 0%, #141539 100%);
+  height: 100vh;
+}
